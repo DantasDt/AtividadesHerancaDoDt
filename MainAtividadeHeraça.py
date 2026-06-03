@@ -1,6 +1,6 @@
 import os 
 os.system("cls")
-from p import Pet, Dragao, CaoRobo
+from ClassePetDoDt import Pet, Dragao, CaoRobo
 obj = Pet
 while True:
     x = str(input("Oque deseja fazer? "))
