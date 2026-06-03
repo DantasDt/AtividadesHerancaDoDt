@@ -34,7 +34,8 @@ class CaoRobo(Pet):
     
     def Recarregar(self, valor):
         if valor != 100:
-            return self.__CargaBateria == 100
+            self.__CargaBateria = 100
+            return self.__CargaBateria
         
     def mostrarStatusCaoRobo(self):
         super().mostrarStatus()
