@@ -1,7 +1,8 @@
 import os 
 os.system("cls")
-from ClassePetDoDt import Pet, Dragao, CaoRobo
-obj = Pet
+from ClassePetdoDt import Dragao, CaoRobo
+obj = CaoRobo
+obj2 = Dragao
 while True:
     x = str(input("Oque deseja fazer? "))
     x = x.lower()
@@ -13,7 +14,7 @@ while True:
                 nome = str(input("Informe o nome do pet: "))
                 humor = int(input("Informe o humor do pet: "))
                 nivelFogo = int(input("Informe o nivel de fogo do pet: "))
-                obj = Dragao(nome, humor, nivelFogo)
+                obj2 = Dragao(nome, humor, nivelFogo)
         elif y == "caorobo":
                 nome = str(input("Informe o nome do pet: "))
                 humor = int(input("Informe o humor do pet: "))
@@ -21,19 +22,22 @@ while True:
                 obj = CaoRobo(nome, humor, nivelBateria)
     elif x == "brincar":
         os.system("cls")
-        obj.brincar()
-        print("Os pets brincaram e seus humores melhoraram!")
+        if y == "dragao":
+            obj2.brincar()
+        elif y == "caorobo":
+              obj.brincar()
+        print("O pet brincou e seus humor melhorou!")
     
     elif x == "mostrar":
             os.system("cls")
             if y == "dragao":
-                  obj.mostrarStatusDragao()
+                  obj2.mostrarStatusDragao()
             else:
                   obj.mostrarStatusCaoRobo()
     
     elif x == "soltar fogo":
           os.system("cls")
-          obj.SoltarFogo()
+          obj2.SoltarFogo()
     
     elif x == "recarregar":
           os.system("cls")
