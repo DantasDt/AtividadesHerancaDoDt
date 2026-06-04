@@ -12,7 +12,7 @@ class Conta:
         if self._saldo > valor:
             self._saldo -= valor
         else:
-            print("Valor inválido para depósito!")
+            print("Valor inválido para saque!")
         return self._saldo
     
 class Poupanca(Conta):
