@@ -37,3 +37,6 @@ class ContaEspecial(Conta):
         else:
             self._saldo -= valor
         return self._saldo and self.__limite
+    
+    def limite(self):
+        return self.__limite
