@@ -27,13 +27,34 @@ while True:
             print("Tentativa de saque efetuado!")
             print("Seu novo saldo é de: ", obj2.sacar(valor))
             print("Seu limite agora é de: ", obj2.limite())
-        else:
+        elif y == "poupanca":
             os.system("cls")
             valor = float(input("Informe o valor: "))
             print("Tentativa de saque efetuado!")
             print("Seu novo saldo é de: ", obj.saca(valor))
+        else:
+            print("Crie uma conta antes!")
+        
     elif x == "render":
+        if y == "poupanca":
+            os.system("cls")
+            print("Rendimento mensal adicionado ao seu saldo!")
+            print("Novo saldo: ", obj.Render())
+        else:
+            print("Tipo de conta errado!")
+    
+    elif x == "depositar":
         os.system("cls")
-        print("Rendimento mensal adicionado ao seu saldo!")
-        print("Novo saldo: ", obj.Render())
+        if y == "conta especial":
+            os.system("cls")
+            valor = float(input("Informe o valor: "))
+            print("Tentativa de depósito efetuado!")
+            print("Seu novo saldo é de: ", obj2.deposita(valor))
+        elif x == "poupanca":
+            os.system("cls")
+            valor = float(input("Informe o valor: "))
+            print("Tentativa de depósito efetuado!")
+            print("Seu novo saldo é de: ", obj.deposita(valor))
+        else:
+            print("Crie uma conta antes!")
 # Finalizado
